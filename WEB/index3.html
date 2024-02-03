@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            text-align:center;
+            padding:200px 0px 0px 0px;
+            background-image:url(istockphoto-1301492606-612x612.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height:100vh;
+         }
+         #head{
+            color:black;
+            padding:0px;
+         }
+         @media(max-width:640px){
+            body{
+            text-align:center;
+            padding:200px 0px 0px 0px;
+            background-image:url(istockphoto-1301492606-612x612.jpg);
+            background-repeat: no-repeat;
+           background-position:right;
+           background-size:cover;
+            height:100vh;
+           color:white;
+            font-size:20px;
+         }
+        
+         }
+    </style>
+     <script>
+        function validate() {
+            var fname = document.reg_form.fname;
+            var lname = document.reg_form.lname;
+            var gender = document.reg_form.gender;
+            var email = document.reg_form.email;
+            
+
+            if (fname.value.length <= 0) {
+                alert("first name is filled out");
+                fname.focus();
+                return false;
+            }
+            if (lname.value.length <= 0) {
+                alert("Last Name is filled out");
+                lname.focus();
+                return false;
+            }
+            
+            if (gender.value.length <= 0) {
+                alert("choose one");
+                gender.focus();
+                return false;
+            }
+            if (email.value.length <= 0) {
+                alert("Email Id is filled out");
+                email.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <from>
+            <form action="course.html" id="from" name="reg_form" onsubmit="return validate()">         
+            <h1>Registration Form</h1>
+          <label>First Name: </label>
+                
+          <input type="text"id="fname" name="fname" placeholder="First Name"><br><br>
+                
+   <label>Last Name: </label>
+                
+          <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+               
+     <label>Gender: </label>
+            <select  id="gender">
+            <option value="male">Male</option>
+            <option value="Female">Female</option>
+            <option value="other">Other</option>
+            </select>
+             <br><br>
+    <label>Email Id: </label>
+         <input type="text"id="email" name="email"><br><br>
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="reset" value="Reset">
+        </from>
+    </div>
+</body>
+</html>
